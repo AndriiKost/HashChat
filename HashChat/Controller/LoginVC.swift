@@ -12,12 +12,15 @@ class LoginVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
 
     @IBAction func closeButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func signupButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: TO_SIGN_UP, sender: nil)
     }
 
 }

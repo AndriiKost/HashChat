@@ -12,3 +12,15 @@ import Foundation
 let TO_LOGIN = "goToLoginVC"
 let TO_SIGN_UP = "goToSignup"
 let UNWIND = "unwinedToChannel"
+
+// User Defaults
+let TOKEN_KEY = "token"
+let LOGGED_IN_KEY = "loggedIn"
+let USER_EMAIL = "userEmail"
+
+// 
+typealias CompletionHandler = (_ Success: Bool) -> ()
+
+// URL Constants
+let BASE_URL = "https://hashchatty.herokuapp.com/v1/"
+let URL_REGISTER = "\(BASE_URL)account/register"

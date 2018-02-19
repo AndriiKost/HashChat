@@ -12,6 +12,7 @@ import Foundation
 let TO_LOGIN = "goToLoginVC"
 let TO_SIGN_UP = "goToSignup"
 let UNWIND = "unwinedToChannel"
+let TO_AVATAR_PICKER = "goToAvatarPicker"
 
 // User Defaults
 let TOKEN_KEY = "token"

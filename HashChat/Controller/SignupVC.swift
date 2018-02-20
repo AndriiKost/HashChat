@@ -54,6 +54,10 @@ class SignupVC: UIViewController {
         let blue = CGFloat(arc4random_uniform(255)) / 255
         
         backColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
+        
+        // set random color to avatar background color, so it can show in the ChannelVC
+        avatarColor = "[\(red), \(green), \(blue), 1]"
+        
         // Add animation when pressing the random color
         UIView.animate(withDuration: 0.2) {
             // Set image to random color

@@ -35,5 +35,62 @@ class UserDataService {
         self.avatarName = avatarName
     }
     
+    // Transfer random color string into the UIColor    
+    func returnUIColor(components: String) -> UIColor {
+    //"avatarColor": "[0.592156862745098, 0.152941176470588, 0.23921568627451, 1]"
+        
+        // pass random generated color
+        let scanner = Scanner(string: components)
+        
+        // set which characters to skip and not care about
+        let skipped = CharacterSet(charactersIn: "[], ")
+        
+        // scan up to specific character (comma)
+        let comma = CharacterSet(charactersIn: ",")
+        
+        // set the characters to be skipped
+        scanner.charactersToBeSkipped = skipped
+        
+        // variables for red green blue and alpha
+        var r, g, b, a : NSString?
+        
+        // scan string up to specific character and save into the r
+        scanner.scanUpToCharacters(from: comma, into: &r)
+        scanner.scanUpToCharacters(from: comma, into: &g)
+        scanner.scanUpToCharacters(from: comma, into: &b)
+        scanner.scanUpToCharacters(from: comma, into: &a)
+        
+        // default color in case we fail with scanning and unwrapping
+        let defaultColor = UIColor.lightGray
+        
+        // unwrap every variable
+        guard let rUnwrapped = r else { return defaultColor }
+        guard let gUnwrapped = g else { return defaultColor }
+        guard let bUnwrapped = b else { return defaultColor }
+        guard let aUnwrapped = a else { return defaultColor }
+        
+        // Unwrap strings to doubles and set to CGFloat
+        let rFloat = CGFloat(rUnwrapped.doubleValue)
+        let gFloat = CGFloat(gUnwrapped.doubleValue)
+        let bFloat = CGFloat(bUnwrapped.doubleValue)
+        let aFloat = CGFloat(aUnwrapped.doubleValue)
+        
+        // Set unwrapped CGFloat to our new color
+        let newUIColor = UIColor(red: rFloat, green: gFloat, blue: bFloat, alpha: aFloat)
+        
+        return newUIColor
+    }
+    
+    func logoutUser() {
+        id = ""
+        avatarName = ""
+        avatarColor = ""
+        email = ""
+        name = ""
+        AuthService.instance.isLoggedIn = false
+        AuthService.instance.userEmail = ""
+        AuthService.instance.authToken = ""
+    }
+    
     
 }

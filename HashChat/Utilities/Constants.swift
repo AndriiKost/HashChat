@@ -19,6 +19,12 @@ let TOKEN_KEY = "token"
 let LOGGED_IN_KEY = "loggedIn"
 let USER_EMAIL = "userEmail"
 
+// Colors
+let hashPurplePlaceHolder = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 0.5)
+
+// Notification constance
+let NOTIF_USER_DATA_DID_CHANGE = Notification.Name("notifUserDataChanged")
+
 // 
 typealias CompletionHandler = (_ Success: Bool) -> ()
 

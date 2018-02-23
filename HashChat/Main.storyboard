@@ -73,14 +73,14 @@
                                 <rect key="frame" x="0.0" y="123" width="375" height="429"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="3Ov-Ff-As8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="3Ov-Ff-As8" customClass="ChannelCell" customModule="HashChat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Ov-Ff-As8" id="F2z-d3-V7f">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#General" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yk-ql-WdU">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#general" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yk-ql-WdU">
                                                     <rect key="frame" x="35" y="12" width="305" height="20"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" red="0.96446390839999996" green="1" blue="0.95964984399999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -94,6 +94,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="channelName" destination="5yk-ql-WdU" id="nxI-XO-jR5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -128,6 +131,7 @@
                         <viewLayoutGuide key="safeArea" id="E7e-Je-1hv"/>
                     </view>
                     <connections>
+                        <outlet property="channelTableView" destination="DDf-Zx-plC" id="aQu-JL-1kn"/>
                         <outlet property="loginButton" destination="thN-Zq-Gya" id="1Fm-JW-Lie"/>
                         <outlet property="userImage" destination="CSe-ZU-5Ef" id="Zet-ID-6e7"/>
                         <segue destination="cEN-xc-cXx" kind="show" identifier="goToLoginVC" id="jzU-j9-azu"/>
@@ -239,7 +243,14 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginPressed:" destination="cEN-xc-cXx" eventType="touchUpInside" id="WMc-QH-1Fd"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="qOj-wc-ahZ">
+                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -252,11 +263,16 @@
                             <constraint firstItem="HQe-c6-waD" firstAttribute="trailing" secondItem="lfN-tg-Huf" secondAttribute="trailing" constant="16" id="dFj-Nj-j1H"/>
                             <constraint firstItem="4gW-1q-rHG" firstAttribute="top" secondItem="HQe-c6-waD" secondAttribute="top" constant="60" id="dYN-HN-pRb"/>
                             <constraint firstItem="lfN-tg-Huf" firstAttribute="top" secondItem="HQe-c6-waD" secondAttribute="top" constant="8" id="e5N-2o-yTn"/>
+                            <constraint firstItem="qOj-wc-ahZ" firstAttribute="centerY" secondItem="SOX-XT-vkk" secondAttribute="centerY" constant="-100" id="jui-KK-Uwd"/>
                             <constraint firstItem="YA7-Fy-sLr" firstAttribute="centerX" secondItem="SOX-XT-vkk" secondAttribute="centerX" id="n54-0p-RgI"/>
+                            <constraint firstItem="qOj-wc-ahZ" firstAttribute="centerX" secondItem="SOX-XT-vkk" secondAttribute="centerX" id="odZ-Iu-z51"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HQe-c6-waD"/>
                     </view>
                     <connections>
+                        <outlet property="passwordLabel" destination="izV-Lq-ycp" id="giP-5h-eZC"/>
+                        <outlet property="spinner" destination="qOj-wc-ahZ" id="orz-VW-FrW"/>
+                        <outlet property="usernameLabel" destination="Q8y-7e-3Pf" id="ojV-TH-IKB"/>
                         <segue destination="TOy-fe-qI2" kind="show" identifier="goToSignup" id="dLN-uQ-SOy"/>
                     </connections>
                 </viewController>

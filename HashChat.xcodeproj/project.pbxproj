@@ -17,12 +17,15 @@
 		371E7AA9203C75B200CAD75C /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371E7AA8203C75B200CAD75C /* CircleImage.swift */; };
 		371E7AB1203CB06C00CAD75C /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371E7AAF203CB06C00CAD75C /* ProfileVC.swift */; };
 		371E7AB2203CB06C00CAD75C /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 371E7AB0203CB06C00CAD75C /* ProfileVC.xib */; };
+		371E7AB4203DB82100CAD75C /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371E7AB3203DB82100CAD75C /* MessageService.swift */; };
+		371E7AB6203DB84E00CAD75C /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371E7AB5203DB84E00CAD75C /* Channel.swift */; };
 		37251F26203893E600FF75D2 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37251F25203893E600FF75D2 /* SignupVC.swift */; };
 		373465FD2037898C008673F2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373465FC2037898B008673F2 /* SWRevealViewController.m */; };
 		37346602203794C9008673F2 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37346601203794C9008673F2 /* ChatVC.swift */; };
 		37346604203794D8008673F2 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37346603203794D8008673F2 /* ChannelVC.swift */; };
 		374E52F1203880A400493CF5 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374E52F0203880A400493CF5 /* GradientView.swift */; };
 		377BC2CF20387ED30007B301 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377BC2CE20387ED30007B301 /* Main.storyboard */; };
+		37A6BAA62040620000D4A660 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A6BAA52040620000D4A660 /* ChannelCell.swift */; };
 		37F75104203784A5009FB2E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F75103203784A5009FB2E2 /* AppDelegate.swift */; };
 		37F7510B203784A5009FB2E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37F7510A203784A5009FB2E2 /* Assets.xcassets */; };
 		37F7510E203784A5009FB2E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F7510C203784A5009FB2E2 /* LaunchScreen.storyboard */; };
@@ -40,6 +43,8 @@
 		371E7AA8203C75B200CAD75C /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		371E7AAF203CB06C00CAD75C /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		371E7AB0203CB06C00CAD75C /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
+		371E7AB3203DB82100CAD75C /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
+		371E7AB5203DB84E00CAD75C /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		37251F25203893E600FF75D2 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		373465FA2037898A008673F2 /* HashChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HashChat-Bridging-Header.h"; sourceTree = "<group>"; };
 		373465FB2037898B008673F2 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -48,6 +53,7 @@
 		37346603203794D8008673F2 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		374E52F0203880A400493CF5 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		377BC2CE20387ED30007B301 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		37A6BAA52040620000D4A660 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		37F75100203784A5009FB2E2 /* HashChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HashChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F75103203784A5009FB2E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37F7510A203784A5009FB2E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +98,7 @@
 			children = (
 				371E7A9E203B253D00CAD75C /* AuthService.swift */,
 				371E7AA2203B803A00CAD75C /* UserDataService.swift */,
+				371E7AB3203DB82100CAD75C /* MessageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -121,6 +128,7 @@
 				371E7AA0203B43DD00CAD75C /* RoundedButton.swift */,
 				371E7AA6203B8B2000CAD75C /* AvatarCell.swift */,
 				371E7AA8203C75B200CAD75C /* CircleImage.swift */,
+				37A6BAA52040620000D4A660 /* ChannelCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -128,6 +136,7 @@
 		373465FF20379491008673F2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				371E7AB5203DB84E00CAD75C /* Channel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -328,10 +337,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				37251F26203893E600FF75D2 /* SignupVC.swift in Sources */,
+				37A6BAA62040620000D4A660 /* ChannelCell.swift in Sources */,
 				371E7AA5203B897800CAD75C /* AvatarPickerVC.swift in Sources */,
 				371E7AA1203B43DD00CAD75C /* RoundedButton.swift in Sources */,
 				371E7AB1203CB06C00CAD75C /* ProfileVC.swift in Sources */,
+				371E7AB6203DB84E00CAD75C /* Channel.swift in Sources */,
 				371E7AA9203C75B200CAD75C /* CircleImage.swift in Sources */,
+				371E7AB4203DB82100CAD75C /* MessageService.swift in Sources */,
 				37346604203794D8008673F2 /* ChannelVC.swift in Sources */,
 				371E7AA3203B803A00CAD75C /* UserDataService.swift in Sources */,
 				37346602203794C9008673F2 /* ChatVC.swift in Sources */,

@@ -46,3 +46,7 @@ let BEARER_HEADER = [
     "Authorization": "Bearer \(AuthService.instance.authToken)",
     "Content-Type": "application/json; charset=utf-8"
 ]
+
+// API
+let SOCKET_EVT_NEW_CHANNEL = "newChannel"
+let SOCKET_EVT_CHANNEL_CREATED = "channelCreated"

@@ -97,6 +97,9 @@
                                     <real key="value" value="5"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="createChannelButtonPressed:" destination="-1" eventType="touchUpInside" id="GYK-US-iG9"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HcC-cg-Sje">
                             <rect key="frame" x="297" y="8" width="30" height="30"/>

@@ -25,6 +25,13 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         // Listen for the notification (add observer, whenever the notification is posted, we listen). It would be called every time we receive that notification
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+        
+        // receive channels and reload data
+        SocketService.instance.getChannel { (success) in
+            if success {
+                self.channelTableView.reloadData()
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

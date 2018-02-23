@@ -61,6 +61,9 @@
                                 <state key="normal" image="addChannelButton">
                                     <color key="titleColor" red="0.96446390839999996" green="1" blue="0.95964984399999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addChannelPressed:" destination="Zls-hG-ctG" eventType="touchUpInside" id="Eeq-eO-ALW"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="CSe-ZU-5Ef" customClass="CircleImage" customModule="HashChat" customModuleProvider="target">
                                 <rect key="frame" x="16" y="572" width="75" height="75"/>
